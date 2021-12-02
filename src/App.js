@@ -1,12 +1,13 @@
-import {graph, graphEvents, graphOptions} from "./graph-data";
+import {graphData} from "./graph/data"
+import {graphStyle} from "./graph/style"
+
 // https://codesandbox.io/s/xoxhn?file=/src/App.js
 import SQLGraph from "./SQLGraph";
 
 function App() {
     return (
-        <SQLGraph graph={graph}
-                  options={graphOptions}
-                  events={graphEvents}/>
+        <SQLGraph graphData={graphData}
+                  graphStyle={graphStyle}/>
     );
 }
 

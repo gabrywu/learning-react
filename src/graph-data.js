@@ -1,6 +1,7 @@
 export const graph = {
     nodes: [
         {
+            cluster:1,
             id: "1",
             title: "scan-table",
             label: "tns_tables.trisk_eval_rqst",
@@ -15,6 +16,7 @@ export const graph = {
                 name: "src_cre_dt"
             }]
         }, {
+            cluster:1,
             id: "2",
             title: "project",
             label: "project",
@@ -44,7 +46,7 @@ export const graphOptions = {
 
 export const graphEvents = {
     select: function(event) {
-        var { nodes, edges } = event;
+        const {nodes, edges} = event;
         console.log("selected nodes: "+nodes)
         console.log("selected edges: "+edges)
     },

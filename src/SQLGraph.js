@@ -22,22 +22,7 @@ class SQLGraph extends React.Component {
                         console.log("node label " + label)
                         return false;
                     },
-                    processProperties: function (clusterOptions,
-                                                 childNodes, childEdges) {
-                        var totalMass = 0;
-                        var totalValue = 0;
-                        for (var i = 0; i < childNodes.length; i++) {
-                            totalMass += childNodes[i].mass;
-                            totalValue = childNodes[i].value
-                                ? totalValue + childNodes[i].value
-                                : totalValue;
-                        }
-                        clusterOptions.mass = totalMass;
-                        if (totalValue > 0) {
-                            clusterOptions.value = totalValue;
-                        }
-                        return clusterOptions;
-                    }
+
                 }
 
                 network.cluster(options)

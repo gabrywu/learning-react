@@ -8,6 +8,12 @@ const layout = {name: "dagre"};
 
 class SQLGraph extends React.Component {
     cytoscapeReady(cy) {
+        // register event here
+        // https://js.cytoscape.org/#events
+        cy.on('click',function (evt){
+            const node = evt.target
+            console.log("tapped "+JSON.stringify(evt.target.count)+" event type "+evt.type)
+        })
     }
 
     render() {
